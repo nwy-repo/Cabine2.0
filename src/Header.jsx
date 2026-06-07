@@ -1,12 +1,13 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 export default function Header() {
     const [open, setOpen] = useState(false)
 
     return(
-        <header className="fixed w-full top-0 bg-white/85 px-6 z-50">
-            <nav className="flex text-center items-center justify-between md:gap-0 gap-7 h-20">
+        <header className="fixed w-full top-0 bg-white/85  z-50">
+            <nav className="flex text-center items-center px-6 justify-between md:gap-0 gap-7 h-20 shadow-xl w-full">
                 <button
                     className="md:hidden text-black text-3xl"
                     onClick={() => setOpen(!open)}
@@ -15,8 +16,8 @@ export default function Header() {
                 </button>
 
                 <ul className="hidden md:flex text-center items-center gap-5">
-                    <li>Home</li>
-                    <li>Orange</li>
+                    <Link to='/'>Home</Link>
+                    <Link to='/Orange'>Orange</Link>
                     <li>Moov</li>
                     <li>Mtn</li>
                 </ul>
