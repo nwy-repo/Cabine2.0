@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 export default function Header() {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const navigate = useNavigate();
 
     return(
         <header className="fixed w-full top-0 bg-white/85  z-50">
@@ -22,17 +23,63 @@ export default function Header() {
                     <li>Mtn</li>
                 </ul>
 
-                <h1 className="md:text-4xl text-2xl text-blue-500 font-bold">CABINE 2.0</h1>
+                <h1
+                    className="
+                        md:text-4xl
+                        text-2xl
+                        text-blue-500
+                        font-bold
+                        cursor-pointer
+                    "
+                    onClick={() => navigate('/')}
+                >
+                    CABINE 2.0
+                </h1>
 
-                <button className="md:py-3 py-2 md:px-6 px-4 rounded-xl font-bold text-white shadow-xl bg-blue-500">Contact</button>
+                <button
+                    className="
+                        md:py-3
+                        py-2
+                        md:px-6
+                        px-4
+                        rounded-xl
+                        font-bold
+                        text-white
+                        shadow-xl
+                        bg-blue-500
+                        cursor-pointer
+                    "
+                    onClick={() => navigate('/Contact')}
+                >
+                    Contact
+                </button>
             </nav>
 
             {open && (
                 <div className="md:hidden list-none w-full flex flex-col items-center gap-6 py-6 bg-white/8">
-                    <li className="">Home</li>
-                    <li className="">Orange</li>
-                    <li className="">Moov</li>
-                    <li className="">Mtn</li>
+                    <Link
+                        to='/'
+                        onClick={() => setOpen(false)}
+                    >
+                        Home
+                    </Link>
+
+                    <Link
+                        to='/Orange'
+                        onClick={() => setOpen(false)}
+                    >
+                        Orange
+                    </Link>
+
+                    <Link
+                    >
+                        Moov
+                    </Link>
+
+                    <Link
+                    >
+                        Mtn
+                    </Link>
                 </div>
             )}
         </header>
