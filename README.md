@@ -79,7 +79,7 @@ La page `/admin` permet d'ajouter, modifier et supprimer les packs (Internet, Mi
 2. Dans **Project Settings → API**, récupère l'**URL du projet** et la clé **anon public**.
 3. Colle-les dans `.env` (racine du projet) :
    ```
-   VITE_SUPABASE_URL=https://xxxxxxxxxxxx.supabase.c
+   VITE_SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
    VITE_SUPABASE_ANON_KEY=xxxxxxxxxxxxxxxxxxxxxxxx
    ```
 
