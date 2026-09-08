@@ -18,9 +18,9 @@ export default function Header() {
 
                 <ul className="hidden md:flex text-center items-center gap-5">
                     <Link to='/'>Home</Link>
-                    <Link to='/Orange'>Orange</Link>
-                    <li>Moov</li>
-                    <li>Mtn</li>
+                    <Link to='/operateur/orange'>Orange</Link>
+                    <Link to='/operateur/moov'>Moov</Link>
+                    <Link to='/operateur/mtn'>Mtn</Link>
                 </ul>
 
                 <h1
@@ -65,18 +65,22 @@ export default function Header() {
                     </Link>
 
                     <Link
-                        to='/Orange'
+                        to='/operateur/orange'
                         onClick={() => setOpen(false)}
                     >
                         Orange
                     </Link>
 
                     <Link
+                        to='/operateur/moov'
+                        onClick={() => setOpen(false)}
                     >
                         Moov
                     </Link>
 
                     <Link
+                        to='/operateur/mtn'
+                        onClick={() => setOpen(false)}
                     >
                         Mtn
                     </Link>
