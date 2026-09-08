@@ -85,7 +85,7 @@ export default function AdminDashboard({ session }) {
   }
 
   return (
-    <section className="min-h-screen bg-neutral-100 p-6">
+    <section className="min-h-screen md:pt-40 bg-neutral-100 p-6">
       <div className="max-w-5xl mx-auto flex flex-col gap-6">
         <header className="flex items-center justify-between">
           <div>
